@@ -20,22 +20,22 @@ public class Main {
         for (int i = 10; i>-11;i--){
             System.out.println(i);
         }
-        //ЗАДАЧА 5
+            //ЗАДАЧА 5
         System.out.println("ЗАДАЧА 5");
         for (int i = 1904; i<=2096;i+=4){
             System.out.println(i + " год является високосным");
         }
-        //ЗАДАЧА 6
+            //ЗАДАЧА 6
         System.out.println("ЗАДАЧА 6");
         for (int i = 7; i<=98;i+=7){
             System.out.println(i);
         }
-        //ЗАДАЧА 7
+            //ЗАДАЧА 7
         System.out.println("ЗАДАЧА 7");
         for (int i = 1; i<=512;i*=2){
             System.out.println(i);
         }
-        //ЗАДАЧА 8
+            //ЗАДАЧА 8
         System.out.println("ЗАДАЧА 8");
         int vklad = 29000;
         int summaNakopleniy = 0;
