@@ -1,82 +1,47 @@
-import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
-
+        tusk1();
+    }
+    //public static int[] generateRandomArray() {
+    //  java.util.Random random = new java.util.Random();
+    //int[] arr = new int[5];
+    //for (int i = 0; i < arr.length; i++) {
+    //  arr[i] = random.nextInt(100_000) + 100_000;
+    //}
+    //return arr;
+    //}
+    public static void tusk1() {
         //ЗАДАЧА1
         System.out.println("ЗАДАЧА1");
-        int[]arrOfInt = new int[]{1, 2, 3};
-        double[]arrOfDouble = {1.57, 7.654, 9.986};
-        int[]improArr = {4, 5, 6};
-        //по дефолту массив заполнен нулями
+        int[] arr1 = {1,2,3,4,5};
+        int summ = 0;
+        for (int i : arr1){
+            summ+=i;
+        }
+        System.out.println("Cумма трат за месяц составила " + summ + " рублей");
         //ЗАДАЧА2
         System.out.println("ЗАДАЧА2");
-        int arrSize = arrOfInt.length;
-        int i = 0;
-        while (i<arrSize){
-            System.out.print(arrOfInt[i]);
-            i += 1;
-            if(i<arrSize) {
-                System.out.print(", ");
+        int min = 2000000;
+        int max = -1;
+        for (int i : arr1){
+            if(i>max){
+                max = i;
+            }
+            if(i<min){
+                min = i;
             }
         }
-        System.out.println("");
-        arrSize = arrOfDouble.length;
-        i = 0;
-        while (i<arrSize) {
-            System.out.print(arrOfDouble[i]);
-            i += 1;
-            if (i < arrSize) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("");
-        arrSize = improArr.length;
-        i = 0;
-        while (i<arrSize) {
-            System.out.print(improArr[i]);
-            i += 1;
-            if (i < arrSize) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("");
+        System.out.println("Минимальная сумма трат за неделю составила "+min+ " рублей. Максимальная сумма трат за неделю составила "+max+" рублей");
         //ЗАДАЧА3
         System.out.println("ЗАДАЧА3");
-        arrSize = arrOfInt.length-1;
-        while (0<=arrSize) {
-            System.out.print(arrOfInt[arrSize]);
-            arrSize -= 1;
-            if (0 <= arrSize) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("");
-        arrSize = arrOfDouble.length-1;
-        while (0<=arrSize) {
-            System.out.print(arrOfDouble[arrSize]);
-            arrSize -= 1;
-            if (0 <= arrSize) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("");
-        arrSize = improArr.length-1;
-        while (0<=arrSize) {
-            System.out.print(improArr[arrSize]);
-            arrSize -= 1;
-            if (0 <= arrSize) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("");
+        int kolvoDney = 30;
+        int sredTrat = summ/kolvoDney;
+        System.out.println("Средняя сумма трат за месяц составила " + sredTrat+ " рублей ");
         //ЗАДАЧА4
         System.out.println("ЗАДАЧА4");
-        for(int index = 0; index<arrOfInt.length; index++){
-            if(arrOfInt[index]%2==1){
-                arrOfInt[index] += 1;
-            }
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length-1; i>=0; i--){
+            System.out.print(reverseFullName[i]);
         }
-        String s1 = Arrays.toString(arrOfInt);
-        System.out.println(s1);
     }
 }
